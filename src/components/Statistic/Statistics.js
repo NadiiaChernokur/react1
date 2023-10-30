@@ -1,25 +1,20 @@
-import { Container, Head, List, ListUl } from "./Statistic.styled"
+import { Container, Head, ListItem, ListUl } from './Statistic.styled';
 
+export const Statistics = ({ stats, title }) => {
+  return (
+    <Container>
+      <Head>{title ? `${title}` : ''}</Head>
 
-
-export const Statistics = ({stats}) => {
-return (
-    <Container >
-    <Head >Upload stats</Head>
-  
-    < ListUl>
-       {stats.map(card => {
-        return (
-        <List key={card.id}>
-          <span >{card.label}</span>
-         <span >{card.percentage}</span>
-          </List>
-        )
+      <ListUl>
+        {stats.map(card => {
+          return (
+            <ListItem key={card.id}>
+              <span>{card.label}</span>
+              <span>{card.percentage}</span>
+            </ListItem>
+          );
         })}
-        
-   
-    </ListUl>
-  </Container>
-)  
-}
- 
+      </ListUl>
+    </Container>
+  );
+};

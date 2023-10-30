@@ -1,5 +1,5 @@
 
-import { Container, Img, List, ListUl, Text, Wrapper } from './Profile.styled';
+import { Container, Img,  ListItem, ListUl, Text, Wrapper } from './Profile.styled';
 
 
 export const Profile = ({username, tag, location, avatar, stats: {followers, views, likes}}) => (
@@ -17,18 +17,18 @@ export const Profile = ({username, tag, location, avatar, stats: {followers, vie
       </Wrapper>
     
       <ListUl >
-        <List>
+        <ListItem>
           <span >Followers</span>
           <span >{followers}</span>
-        </List>
-        <List>
+        </ListItem>
+        <ListItem>
           <span >Views</span>
           <span >{views}</span>
-        </List>
-        <List>
+        </ListItem>
+        <ListItem>
           <span >Likes</span>
           <span >{likes}</span>
-        </List>
+        </ListItem>
       </ListUl>
     </Container>
     )

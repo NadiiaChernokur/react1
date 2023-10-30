@@ -13,7 +13,7 @@ display: flex;
  gap: 14px;
 
 `
-export const List = styled.li `
+export const ListItem  = styled.li `
 display: flex;
 flex-direction: row;
 gap: 14px;

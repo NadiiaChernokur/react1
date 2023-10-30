@@ -1,20 +1,25 @@
-import { ContainerUl, List, Span } from "./Friend.styled"
+import { ContainerUl, ListItem, Span } from './Friend.styled';
+import { FriendListItem } from './friendListItem';
 
-export const FriendList = ({friends}) => {
-    return (
-        <ContainerUl >
-            {friends.map(friend => {
-                return (
-                    <List key={friend.id}>
-                    <Span prop={friend.isOnline}></Span>
-                    <img  src={friend.avatar} alt="User avatar" width="48" />
-                    <p >{friend.name}</p>
-                   </List>
-                )
-              
-            })}
-       
-        </ContainerUl>
-    )
-  
-    }
+export const FriendList = ({ friends }) => {
+  return (
+    <ContainerUl>
+      {friends.map(({ id, isOnline, avatar, name }) => {
+        return (
+          <FriendListItem
+            id={id}
+            isOnline={isOnline}
+            avatar={avatar}
+            name={name}
+          />
+
+          //     <ListItem key={id}>
+          //     <Span prop={isOnline}></Span>
+          //     <img  src={avatar} alt="User avatar" width="48" />
+          //     <p >{name}</p>
+          //    </ListItem>
+        );
+      })}
+    </ContainerUl>
+  );
+};
