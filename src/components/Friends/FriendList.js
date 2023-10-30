@@ -1,4 +1,4 @@
-import { ContainerUl, ListItem, Span } from './Friend.styled';
+import { ContainerUl, } from './Friend.styled';
 import { FriendListItem } from './friendListItem';
 
 export const FriendList = ({ friends }) => {
