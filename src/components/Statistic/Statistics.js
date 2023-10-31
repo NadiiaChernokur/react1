@@ -3,7 +3,8 @@ import { Container, Head, ListItem, ListUl } from './Statistic.styled';
 export const Statistics = ({ stats, title }) => {
   return (
     <Container>
-      <Head>{title ? `${title}` : ''}</Head>
+      {title && <Head>{title}</Head>}
+      {/* <Head>{title ? `${title}` : ''}</Head> */}
 
       <ListUl>
         {stats.map(card => {
